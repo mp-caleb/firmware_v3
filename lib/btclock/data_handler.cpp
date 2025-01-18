@@ -109,10 +109,7 @@ std::array<std::string, NUM_SCREENS> parseSatsPerCurrency(std::uint32_t price,ch
     {
         priceString.insert(priceString.begin(), NUM_SCREENS - priceString.length(), ' ');
 
-        if (currencySymbol != CURRENCY_USD)
-            ret[0] = "SATS/" + getCurrencyCode(currencySymbol);
-        else 
-            ret[0] = "MSCW/TIME";
+        ret[0] = "SATS/" + getCurrencyCode(currencySymbol);
 
         firstIndex = 1;
 

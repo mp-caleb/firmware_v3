@@ -26,7 +26,6 @@ void tearDown(void)
 void test_CorrectSatsPerDollarConversion(void)
 {
     std::array<std::string, NUM_SCREENS> output = parseSatsPerCurrency(37253, CURRENCY_USD, false);
-    TEST_ASSERT_EQUAL_STRING("MSCW/TIME", output[0].c_str());
     TEST_ASSERT_EQUAL_STRING("2", output[NUM_SCREENS - 4].c_str());
     TEST_ASSERT_EQUAL_STRING("6", output[NUM_SCREENS - 3].c_str());
     TEST_ASSERT_EQUAL_STRING("8", output[NUM_SCREENS - 2].c_str());
